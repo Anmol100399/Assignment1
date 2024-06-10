@@ -16,7 +16,7 @@ namespace Assignment1.Controllers
             double hst = subtotal * 0.13;// Calculate HST
             double totalCost = subtotal + hst;// Calculate total
 
-            // Construct the response strings
+            // Constructing the strings
             string print1 = $"{fortNight} fortnights at $5.50/FN = ${subtotal:F2} CAD";
             //  :f2 means 2 digits after the decimal point.
             string print2 = $"HST 13% = ${hst:F2} CAD";
