@@ -11,9 +11,8 @@ namespace Assignment1.Controllers
     {
             public string Get(int id)
             { 
-            double fortNightCost = 5.50;// cost of fortNight
-            double fortNight = (id + 1) / 14;
-            double subtotal = fortNight * fortNightCost;
+            int fortNight = (id + 1) / 14;
+            double subtotal = fortNight * 5.50;
             double hst = subtotal * 0.13;// Calculate HST
             double totalCost = subtotal + hst;// Calculate total
 
