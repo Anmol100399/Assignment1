@@ -9,16 +9,23 @@ namespace Assignment1.Controllers
 {
     public class HostingCostController : ApiController
     {
-            public double Get(int id)
+            public string Get(int id)
             { 
             double fortNightCost = 5.50;// cost of fortNight
             double fortNight = (id + 1) / 14;
             double subtotal = fortNight * fortNightCost;
             double hst = subtotal * 0.13;// Calculate HST
             double totalCost = subtotal + hst;// Calculate total
-            return subtotal;
-            return hst;
-            return totalCost;
+
+            // Construct the response strings
+            string print1 = $"{fortNight} fortnights at $5.50/FN = ${subtotal:F2} CAD";
+            //  :f2 means 2 digits after the decimal point.
+            string print2 = $"HST 13% = ${hst:F2} CAD";
+            // $ identifies a string literal as an interpolated string.
+            string print3 = $"Total = ${totalCost:F2} CAD";
+
+            // Returning the all three string
+            return $"{print1}\n{print2}\n{print3}";
             }
     }
 }
